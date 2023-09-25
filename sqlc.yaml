@@ -13,6 +13,10 @@ sql:
         go: 
           package: "db"
           out: "./db/sqlc"
+          emit_json_tags: true
+          emit_interface:  false
+          emit_prepared_queries: false
+          emit_exact_table_names: false
       database:
         uri: "postgresql://postgres:postgres@localhost:5432/postgres"
       rules:
