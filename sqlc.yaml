@@ -1,0 +1,23 @@
+version: "2"
+project:
+    id: ""
+cloud:
+    organization: ""
+    project: ""
+    hostname: ""
+sql:
+    - schema: "./db/migration/"
+      queries: "./db/query/"
+      engine: "postgresql"
+      gen:
+        go: 
+          package: "db"
+          out: "./db/sqlc"
+      database:
+        uri: "postgresql://postgres:postgres@localhost:5432/postgres"
+      rules:
+        - sqlc/db-prepare
+overrides:
+    go: null
+plugins: []
+rules: []
