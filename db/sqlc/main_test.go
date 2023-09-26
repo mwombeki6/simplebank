@@ -5,6 +5,8 @@ import (
 	"log"
 	"os"
 	"testing"
+
+	_ "github.com/lib/pq"
 )
 
 const (
@@ -22,5 +24,5 @@ func TestMain(m *testing.M) {
 
 	testQueries = New(conn)
 
-	os.Exit(m.Run())	
+	os.Exit(m.Run())
 }
