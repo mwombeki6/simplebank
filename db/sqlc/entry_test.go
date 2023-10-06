@@ -3,7 +3,7 @@ package db
 import (
 	"context"
 	"testing"
-	"time"
+	//"time"
 
 	"github.com/mwombeki6/simplebank/util"
 	"github.com/stretchr/testify/require"
@@ -26,4 +26,9 @@ func createRandomEntry(t *testing.T, account Account) Entry {
 	require.NotZero(t, entry.CreatedAt)
 
 	return entry
+}
+
+func TestCreateEntry(t *testing.T) {
+	account := createRandomAccount(t)
+	createRandomEntry(t, account)
 }
