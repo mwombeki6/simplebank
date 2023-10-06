@@ -1,6 +1,4 @@
 version: "2"
-project:
-    id: ""
 cloud:
     organization: ""
     project: ""
